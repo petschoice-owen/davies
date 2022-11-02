@@ -29,26 +29,6 @@
                         'container'         => 'ul',
                         'menu_class'        => 'navbar-nav',
                     )); ?>
-                    <!-- <ul class="navbar-nav">
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">About Us</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">News</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">Testimonials</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">Stockists</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="nav-link">Shop</a>
-                        </li>
-                    </ul> -->
                 </div>
             </div>
         </nav>

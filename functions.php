@@ -131,6 +131,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer Section',
 		'parent_slug'	=> 'general-settings',
 	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'CTA Section',
+		'menu_title'	=> 'CTA Section',
+		'parent_slug'	=> 'general-settings',
+	));
 }
 
 
