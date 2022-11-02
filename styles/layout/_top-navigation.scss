@@ -1,0 +1,217 @@
+//main: ../main.scss
+
+// ------------------------------------------------------------------------------------
+// This file contains all styles related to the top-navigation of the site/application.
+// ------------------------------------------------------------------------------------
+
+.top-navigation {
+    padding: 10px 0;
+    background-color: $brand-color;
+
+    .container {
+        position: relative;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+        margin: auto 0 15px;
+    }
+
+    .logo-image {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        max-height: 100px;
+    }
+
+    .navbar .navbar-nav {
+        li:not(:first-child) {
+            // margin-left: 35px;
+            margin-left: 50px;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            padding: 0;
+            font-family: $font-adelle;
+            font-size: 18px;
+            color: #fff;
+            transition: .25s ease-in-out all;
+
+            &:hover {
+                color: $bright-yellow;
+
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+                left: 0;
+                display: flex;
+                width: 0;
+                height: 2px;
+                margin: auto;
+                background-color: $bright-yellow;
+                opacity: 0;
+                transition: .25s ease-in-out all;
+            }
+        }
+    }
+
+    .account {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 5;
+        display: flex;
+
+        .holder {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & + .holder {
+                margin-left: 12px;
+            }
+
+            &:hover {
+                img {
+                    filter: none;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            filter: brightness(100);
+            width: auto;
+            max-height: 26px;
+            transition: .35s ease-in-out all;
+            pointer-events: none;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            width: 30px;
+            height: 26px;
+            color: #fff;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                top: -12px;
+                right: -10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15px;
+                height: 15px;
+                font-size: 8px;
+                line-height: 11px;
+                background-color: $red-punch;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .navbar .navbar-nav  li:not(:first-child) {
+            margin-left: 40px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 10px;
+
+        .container {
+            max-width: 100%;
+        }
+
+        .logo-image {
+            max-width: 110px;
+            max-height: 70px;
+        }
+
+        .navbar-collapse {
+            // margin-bottom: 10px;
+            margin-bottom: 0;
+        }
+
+        .navbar .navbar-nav {
+            li:not(:first-child) {
+                margin-left: 25px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .account {
+            top: 5px;
+            right: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 5px 0;
+
+        .logo-image {
+            max-width: 80px;
+            max-height: 50px;
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: -15px;
+            z-index: 10;
+            width: calc(100% + 15px);
+            margin-bottom: initial;
+            background: $brand-color;
+        }
+
+        .navbar .navbar-nav {
+            padding: 10px 0;
+
+            li {
+                margin: 0 auto;
+                padding: 10px 0;
+
+                &:not(:first-child) {
+                    margin-left: auto;
+                }
+            }
+
+            a {
+                font-size: 16px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .account {
+            top: 0;
+            right: 70px;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}

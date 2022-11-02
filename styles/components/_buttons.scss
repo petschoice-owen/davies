@@ -1,0 +1,66 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button-white-outline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 30px 15px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: $font-adelle-bold;
+    color: $brand-color;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid $brand-color;
+    border-radius: 0;
+    transition: .35s ease-in-out all;
+
+    &:hover {
+        color: #fff;
+        background-color: $brand-color;
+        border-color: $brand-color;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 16px 30px 13px;
+        font-size: 16px;
+    }
+}
+
+.button-white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 30px 15px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: $font-adelle-bold;
+    color: $brand-color;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    transition: .35s ease-in-out all;
+
+    &:hover {
+        color: #fff;
+        background-color: $brand-color;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 16px 30px 13px;
+        font-size: 16px;
+    }
+}
