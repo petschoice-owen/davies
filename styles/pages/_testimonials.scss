@@ -6,6 +6,14 @@
 
 .page-testimonials {
     .testimonials {
+        padding-bottom: 0;
+
+        .no-items {
+            justify-content: center;
+            padding: 20px 0 50px;
+            margin-top: 0;
+        }
+
         .item-testimonial {
             color: #fff;
 
