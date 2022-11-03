@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying any single post.
+ * The template for displaying any single news post.
  *
  */
  
@@ -9,14 +9,12 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php include 'top-navigation.php'; ?>
-			<main class="page-single">
-				<section class="hero hero-title">
-					<div class="container">
-						<h1 class="text-center"><strong><?php the_title(); ?></strong></h1>
-					</div>
-				</section>
-				<section class="single-post-content content-section">
+			<main class="page-single-news">
+				<section class="single-news">
 					<div class="container container-narrow">
+						<div class="back">
+							<a href="#">Back</a>
+						</div>
 						<div class="article-intro">
 							<?php $featured_img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full' ); ?>
 							<?php 
