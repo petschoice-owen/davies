@@ -71,6 +71,7 @@
 
     .item-input span {
         display: flex;
+        flex-wrap: wrap;
 
         input,
         select,
@@ -97,6 +98,10 @@
                 outline: none;
                 box-shadow: none;
             }
+
+            &.wpcf7-not-valid {
+                border-color: #dc3232;
+            }
         }
 
         select {
@@ -110,7 +115,17 @@
         }
     }
 
+    .wpcf7-not-valid-tip {
+        margin-top: 5px;
+        font-family: $font-arial-italic;
+        font-size: 14px;
+    }
+
     .field-submit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
         input {
             @extend .button-white;
             padding: 12px 30px;
@@ -164,6 +179,12 @@
         }
     }
 
+    .wpcf7-response-output {
+        padding: 10px 15px;
+        margin: 0;
+        font-size: 16px;
+    }
+
     @media (max-width: 767px) {
         .item-input span {
             input,
@@ -174,6 +195,10 @@
         }
 
         .field-submit input {
+            font-size: 14px;
+        }
+
+        .wpcf7-response-output {
             font-size: 14px;
         }
     }

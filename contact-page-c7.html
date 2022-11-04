@@ -1,0 +1,78 @@
+<div class="form-items">
+    <div class="form-item item-input item-input-row">
+        <div class="item-input-column">
+            [text* your-name id:yourname class:cf-input placeholder "Enter your full name*"]
+        </div>
+        <div class="item-input-column">
+            [email* your-email id:emailaddress class:cf-input placeholder "Enter your email address*"]
+        </div>
+    </div>
+    <div class="form-item item-input item-input-row">
+        <div class="item-input-column">
+            [text* address1 id:address1 class:cf-input placeholder "Enter your address line 1*"]
+        </div>
+        <div class="item-input-column">
+            [text address2 id:address2 class:cf-input placeholder "Enter your address line 2*"]
+        </div>
+    </div>
+    <div class="form-item item-input item-input-row">
+        <div class="item-input-column">
+            [text towncity id:towncity class:cf-input placeholder "Enter your town/city"]
+        </div>
+        <div class="item-input-column">
+            [text county id:county class:cf-input placeholder "Enter your county"]
+        </div>
+    </div>
+    <div class="form-item item-input item-input-row">
+        <div class="item-input-column">
+            [text postcode id:postcode class:cf-input placeholder "Enter your postcode"]
+        </div>
+        <div class="item-input-column">
+            [text telephone id:telephone class:cf-input placeholder "Enter your telephone"]
+        </div>
+    </div>
+    <div class="form-item item-input item-input-row">
+        <div class="item-input-column">
+            <div class="field-select">
+                [select* your-subject id:social class:cf-select "General Enquiry" "Become a stockist" "Delivery/Order Enquiry" "Feedback" "Other"]
+            </div>
+        </div>
+        <div class="item-input-column">
+            [textarea* message id:message class:cf-textarea placeholder "Enter your message*"]
+        </div>
+    </div>
+    <div class="form-item item-submit item-submit-purple button-right">
+        <div class="field-submit">
+            [submit id:submitform class:cf-submit "SUBMIT"]
+        </div>
+    </div>
+</div>
+
+
+
+---
+
+
+Subject: [your-subject]
+
+
+Date: [_date]
+Time: [_time]
+
+From: [your-name]
+Email: [your-email]
+Address Line 1: [address1]
+Address Line 2: [address2]
+Town/City: [towncity]
+County: [county]
+Postcode: [postcode]
+Telephone: [telephone]
+
+Message Body:
+[message]
+
+User IP Address: [_remote_ip]
+User Agent Details: [_user_agent]
+
+-- 
+This e-mail was sent from a contact form on [_site_title] website ([_site_url]).
