@@ -1,0 +1,32 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the default pages.
+// -----------------------------------------------------------------------------
+
+.page-default {
+    .content-section {
+        * {
+            color: $text-color;
+        }
+
+        .wrapper * + * {
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        .wrapper ul, ol {
+            padding-top: 10px;
+
+            li + li {
+                padding-top: 5px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .wrapper * + * {
+                padding-top: 15px;
+            }
+        }
+    }
+}

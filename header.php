@@ -10,7 +10,7 @@
     <meta name="author" content="Pets Choice Ltd" />
     <meta name="format-detection" content="telephone=no" />
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png">
-    <title><?php if (is_front_page()) { bloginfo('name'); ?> | <?php bloginfo('description'); } else { wp_title(''); } ?></title>
+    <title><?php if (is_front_page()) { bloginfo('name'); ?> | <?php bloginfo('description'); } else { wp_title(''); ?> | <?php bloginfo('name'); } ?></title>
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" />
     <link rel="canonical" href="<?php echo $current_url; ?>" />
 	<?php wp_head(); ?>
