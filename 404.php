@@ -4,19 +4,21 @@
  *
  */
 
-get_header();
-?>
-
-	<header class="page-header alignwide">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
-	</header><!-- .page-header -->
-
-	<div class="error-404 not-found default-max-width">
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentytwentyone' ); ?></p>
-			<?php get_search_form(); ?>
-		</div><!-- .page-content -->
-	</div><!-- .error-404 -->
-
-<?php
-get_footer();
+get_header(); ?>
+<body <?php body_class(); ?>>
+	<?php include 'top-navigation.php'; ?>
+	<main class="page-legal page-404">
+        <section class="hero hero-title">
+            <div class="container container-narrow">
+				<h1 class="text-center"><strong><?php the_field('404_title', 'option'); ?></strong></h1>
+            </div>
+        </section>
+        <section class="legal content-section">
+            <div class="container container-narrow">
+                <div class="wrapper text-center">
+					<?php the_field('404_content', 'option'); ?>
+                </div>
+            </div>
+        </section>
+    </main>
+<?php get_footer(); ?>
