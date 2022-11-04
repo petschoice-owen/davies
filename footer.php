@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
+            <div class="container-fluid">
                 <?php wp_nav_menu( array( 
                     'theme_location'    => 'footer_menu',
                     'container'         => 'ul',

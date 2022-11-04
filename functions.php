@@ -139,6 +139,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Timeline Page',
+		'menu_title'	=> 'Timeline Page',
+		'parent_slug'	=> 'general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
 		'page_title' 	=> 'News Page',
 		'menu_title'	=> 'News Page',
 		'parent_slug'	=> 'general-settings',
