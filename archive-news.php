@@ -82,7 +82,6 @@
         <section class="hero hero-title">
             <div class="container">
                 <h1 class="text-center"><strong><?php the_field('news_page_title', 'option'); ?></strong></h1>
-                <h3 class="text-center">No Posts Yet</h3>
             </div>
         </section>
         <?php if ( have_posts() ) :
