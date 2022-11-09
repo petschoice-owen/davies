@@ -6,6 +6,10 @@
 
 .page-stockists {
     .stockists {
+        .wrapper * + * {
+            margin-top: initial;
+        }
+
         .wrapper-stockist-form {
             margin-top: 30px;
         }
@@ -40,23 +44,376 @@
         .form {
             padding-left: 15px;
         }
+
+        #wpsl-wrap {
+            margin: 30px 0 0;
+
+            .wpsl-search {
+                padding: 0;
+                background: transparent;
+            }
+        }
+
+        #wpsl-search-wrap {
+            form {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+    
+                label {
+                    width: auto !important;
+                    font-family: $font-arial;
+                    font-size: 16px !important;
+                }
+            }
+    
+            .wpsl-input {
+                display: flex;
+                align-items: center;
+    
+                div {
+                    margin-bottom: 0;
+                }
+    
+                #wpsl-search-input {
+                    width: 250px; // this value varies
+                    height: 39px;
+                    padding: 5px 8px;
+                    font-family: $font-arial;
+                    font-size: 16px;
+                }
+            }
+    
+            .wpsl-select-wrap {
+                display: flex;
+                align-items: center;
+    
+                #wpsl-radius {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0;
+                }
+    
+                .wpsl-dropdown {
+                    width: auto;
+    
+                    &:focus-visible,
+                    &:focus-within,
+                    &:focus {
+                        outline: none;
+                    }
+                }
+    
+                #wpsl-results {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0;
+                }
+    
+                .wpsl-selected-item,
+                ul li {
+                    font-family: $font-arial;
+                    font-size: 16px;
+                }
+            }
+    
+            .wpsl-search-btn-wrap {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                margin-right: 0;
+    
+                #wpsl-search-btn {
+                    margin-right: 0;
+                    padding: 7px 30px;
+                    font-family: $font-arial;
+                    font-size: 16px !important;
+                    color: #fff;
+                    background: $brand-color;
+                    border-radius: 5px;
+                    transition: .25s ease-in-out all;
+
+                    &:hover {
+                        background: $yellow;
+                    }
+                }
+            }
+        }
+    
+        #wpsl-result-list {
+            .wpsl-no-results-msg,
+            .wpsl-preloader {
+                font-size: 16px;
+            }
+    
+            .wpsl-store-location {
+                margin-bottom: 0;
+    
+                & > p {
+                    span {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+    
+            li:not(.wpsl-no-results-msg) {
+                background-color: transparent;
+                color: #343434;
+    
+                p {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    line-height: 1.4;
+    
+                    strong {
+                        width: 100%;
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                        line-height: 1.2;
+                    }
+
+                    .wpsl-street {
+                        padding-right: 5px;
+
+                        & + span:not(.wpsl-country) {
+                            padding-right: 5px;
+                        }
+
+                        & + .wpsl-street {
+                            padding-right: 0;
+                        }
+                    }
+                }
+    
+                &:hover {
+                    color: #fff;
+                    background-color: $brand-color;
+    
+                    p,
+                    a {
+                        color: #fff;
+                        transition: none;
+                    }
+    
+                    a:hover {
+                        color: $yellow;
+    
+                        &::before {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+    
+            .wpsl-preloader:hover {
+                background-color: transparent !important;
+                color: #343434 !important;
+    
+                div, p, li {
+                    color: #343434 !important;
+                }
+            }
+    
+            a {
+                font-family: $font-arial-bold;
+                text-decoration: underline;
+                color: #343434;
+                transition: none;
+            }
+    
+            .wpsl-contact-details strong {
+                margin-bottom: 0 !important;
+                font-family: $font-arial !important;
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+            }
+    
+            .wpsl-direction-wrap {
+                display: flex;
+                font-size: 14px;
+                line-height: 1.4;
+    
+                a {
+                    position: relative;
+                    margin-left: 15px;
+    
+                    &::before {
+                        content: "-";
+                        position: absolute;
+                        top: 0;
+                        left: -10px;
+                        font-family: $font-arial;
+                    }
+                }
+            }
+        }
+
+        #wpsl-direction-details {
+            .wpsl-direction-before {
+                margin: 10px 0;
+                padding-left: 0;
+                font-size: 16px;
+
+                #wpsl-direction-start {
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+
+            & > ul li {
+                font-size: 14px;
+            }
+
+            .wpsl-direction-after {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 1399px) {
+        .stockists {
+            #wpsl-search-wrap {
+                form label {
+                    font-size: 15px!important;
+                }
+
+                .wpsl-select-wrap {
+                    .wpsl-selected-item,
+                    .wpsl-select-wrap ul li,
+                    ul li {
+                        font-size: 15px;
+                    }
+                }
+
+                .wpsl-input #wpsl-search-input {
+                    width: 200px;
+                    font-size: 15px;
+                }
+
+                .wpsl-search-btn-wrap #wpsl-search-btn {
+                    padding: 8px 25px;
+                    font-size: 15px !important;
+                }
+            }
+
+            #wpsl-result-list {
+                .wpsl-no-results-msg,
+                .wpsl-preloader {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .stockists #wpsl-search-wrap {
+            .wpsl-input #wpsl-search-input {
+                width: 140px;
+            }
+
+            .wpsl-search-btn-wrap #wpsl-search-btn {
+                padding: 8px 22px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .stockists {
+            #wpsl-search-wrap {
+                form {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
+
+                .wpsl-input {
+                    width: 100%;
+                    margin: 0 0 15px 0;
+
+                    #wpsl-search-input {
+                        width: calc(100% - 180px);
+                    }
+                }
+
+                .wpsl-select-wrap {
+                    #wpsl-radius,
+                    #wpsl-results {
+                        margin-right: 30px;
+                    }
+                }
+
+                .wpsl-search-btn-wrap #wpsl-search-btn {
+                    padding: 8px 25px;
+                }
+            }
+        }
     }
 
     @media (max-width: 767px) {
         .stockists {
-            .stockist-form {
-                padding: 25px 20px;
-            }
-            
-            .text {
-                max-width: 100%;
-                padding-right: 0;
+            #wpsl-search-wrap {
+                .wpsl-input {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    #wpsl-search-input {
+                        width: 100%;
+                    }
+                }
+
+                .wpsl-dropdown {
+                    height: 39px;
+                    padding: 5px;
+                    font-size: 15px;
+                }
+
+                .wpsl-search-btn-wrap {
+                    margin-bottom: 0;
+                }
             }
 
-            .form {
-                max-width: 100%;
-                margin-top: 25px;
-                padding-left: 0;
+            #wpsl-stores {
+                height: 320px !important;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .stockists {
+            #wpsl-search-wrap {
+                .wpsl-select-wrap {
+                    #wpsl-radius,
+                    #wpsl-results {
+                        align-items: flex-start;
+                        flex-direction: column;
+                        margin: 0;
+                    }
+
+                    #wpsl-radius {
+                        padding-right: 10px;
+                    }
+
+                    #wpsl-results {
+                        padding-left: 10px;
+                    }
+                }
+
+                .wpsl-dropdown {
+                    width: 100% !important;
+                }
+
+                .wpsl-search-btn-wrap {
+                    width: calc(50% - 10px);
+                    margin: 20px 0 10px;
+
+                    #wpsl-search-btn {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
