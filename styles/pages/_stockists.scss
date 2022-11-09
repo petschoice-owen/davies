@@ -50,6 +50,7 @@
 
             .wpsl-search {
                 padding: 0;
+                background: transparent;
             }
         }
 
@@ -61,7 +62,6 @@
     
                 label {
                     width: auto !important;
-                    // font-family: $font-helveticaneue;
                     font-family: $font-arial;
                     font-size: 16px !important;
                 }
@@ -76,11 +76,9 @@
                 }
     
                 #wpsl-search-input {
-                    // width: 450px; // this value varies
                     width: 250px; // this value varies
                     height: 39px;
                     padding: 5px 8px;
-                    // font-family: $font-helveticaneue;
                     font-family: $font-arial;
                     font-size: 16px;
                 }
@@ -114,7 +112,6 @@
     
                 .wpsl-selected-item,
                 ul li {
-                    // font-family: $font-helveticaneue;
                     font-family: $font-arial;
                     font-size: 16px;
                 }
@@ -129,7 +126,6 @@
                 #wpsl-search-btn {
                     margin-right: 0;
                     padding: 7px 30px;
-                    // font-family: $font-helveticaneue;
                     font-family: $font-arial;
                     font-size: 16px !important;
                     color: #fff;
@@ -163,7 +159,6 @@
             li:not(.wpsl-no-results-msg) {
                 background-color: transparent;
                 color: #343434;
-                transition: .35s ease-in-out all;
     
                 p {
                     display: flex;
@@ -171,13 +166,24 @@
                     margin-bottom: 0;
                     font-size: 14px;
                     line-height: 1.4;
-                    transition: .35s ease-in-out all;
     
                     strong {
                         width: 100%;
                         margin-bottom: 5px;
                         font-size: 18px;
                         line-height: 1.2;
+                    }
+
+                    .wpsl-street {
+                        padding-right: 5px;
+
+                        & + span:not(.wpsl-country) {
+                            padding-right: 5px;
+                        }
+
+                        & + .wpsl-street {
+                            padding-right: 0;
+                        }
                     }
                 }
     
@@ -188,14 +194,14 @@
                     p,
                     a {
                         color: #fff;
+                        transition: none;
                     }
     
                     a:hover {
-                        color: #101010;
+                        color: $yellow;
     
                         &::before {
                             color: #fff;
-                            transition: .35s ease-in-out all;
                         }
                     }
                 }
@@ -211,16 +217,14 @@
             }
     
             a {
-                // font-family: $font-helveticaneue-bold;
                 font-family: $font-arial-bold;
                 text-decoration: underline;
                 color: #343434;
-                transition: .35s ease-in-out all;
+                transition: none;
             }
     
             .wpsl-contact-details strong {
                 margin-bottom: 0 !important;
-                // font-family: $font-helveticaneue !important;
                 font-family: $font-arial !important;
                 font-size: 14px !important;
                 line-height: 1.4 !important;
@@ -240,10 +244,33 @@
                         position: absolute;
                         top: 0;
                         left: -10px;
-                        // font-family: $font-helveticaneue;
                         font-family: $font-arial;
                     }
                 }
+            }
+        }
+
+        #wpsl-direction-details {
+            .wpsl-direction-before {
+                margin: 10px 0;
+                padding-left: 0;
+                font-size: 16px;
+
+                #wpsl-direction-start {
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+
+            & > ul li {
+                font-size: 14px;
+            }
+
+            .wpsl-direction-after {
+                display: none;
             }
         }
     }
