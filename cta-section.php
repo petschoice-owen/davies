@@ -1,5 +1,5 @@
 <?php 
-    if ( is_page( array( 'stockists' ) ) ) { // either in about us, or contact, or management page is in view ?>
+    if ( is_page( array( 'davies-stockists' ) ) ) { // either in about us, or contact, or management page is in view ?>
         <section class="cta">
             <div class="container">
                 <div class="wrapper">
