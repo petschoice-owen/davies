@@ -12,10 +12,7 @@
                     </div>
                     <div class="holder cart-holder">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-cart.png" class="icon-cart" alt="" />
-                        <?php // echo do_shortcode("[woo_cart_but]"); ?>
-                        <a class="cart-contents menu-item cart" href="#cart" title="Cart">
-                            <span class="cart-contents-count">22</span>
-                        </a>
+                        <?php echo do_shortcode("[woo_cart_but]"); ?>
                     </div>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
