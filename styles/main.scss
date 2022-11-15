@@ -25,7 +25,9 @@
     'components/slider',
     'components/cta',
     'components/contact-form',
-    'components/product-quantity';
+    'components/product-quantity',
+    'components/country-select',
+    'components/calculate-shipping';
 
 // 5. Layout-related sections
 @import
@@ -47,4 +49,8 @@
     'pages/single',
     'pages/default',
     'pages/shop',
-    'pages/single-product';
+    'pages/single-product',
+    'pages/cart',
+    'pages/checkout',
+    'pages/order-received',
+    'pages/my-account';
