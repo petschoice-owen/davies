@@ -89,6 +89,10 @@
             }
         }
 
+        .woocommerce-error {
+            margin-bottom: 30px;
+        }
+
         .woocommerce-notices-wrapper {
             background-color: #f7f6f7;
             padding-top: 0;
@@ -274,11 +278,13 @@
 
     #ship-to-different-address {
         margin-bottom: 14px;
-        padding-left: 3px;
+        padding-left: 0;
         font-family: $font-arial;
         text-transform: none;            
 
         label input {
+            position: relative;
+            top: 1px;
             margin-right: 4px;
         }
     }
@@ -294,7 +300,7 @@
 
             input {
                 position: relative;
-                top: 2px;
+                top: 1px;
             }
         }
 
@@ -389,6 +395,14 @@
                     line-height: 20px !important;
                 }
             }
+        }
+
+        .wc-saved-payment-methods {
+            padding: 0;
+        }
+
+        #wc-stripe-cc-form .wc-stripe-elements-field {
+            padding: 10px !important;
         }
     }
 
@@ -495,8 +509,41 @@
                 font-size: 14px;
             }
             
-            .wc_payment_method fieldset .woocommerce_error li {
-                font-size: 14px !important;
+            .wc_payment_method {
+                fieldset .woocommerce_error li {
+                    font-size: 14px !important;
+                }
+
+                .wc-saved-payment-methods {
+                    padding: 0;
+                }
+        
+                #wc-stripe-cc-form {
+                    .stripe-card-group {
+                        padding-top: 0;
+                    }
+
+                    .clear,
+                    .stripe-source-errors {
+                        padding: 0;
+                    }
+
+                    & + fieldset {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        #order-review {
+            .ppc-button-wrapper {
+                padding-top: 0;
+            }
+
+            #ppc-button-ppcp-gateway {
+                iframe {
+                    padding-top: 0;
+                }
             }
         }
 
