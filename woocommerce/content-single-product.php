@@ -138,7 +138,7 @@ if ( post_password_required() ) {
 										<thead>
 											<tr>
 												<th>Weight of Dog (kg)</th>
-												<th>Grams per day</th>
+												<th>Packs/Grams per day</th>
 											</tr>
 										</thead>
 										<?php while( have_rows('product_tab_feeding_guide') ) : the_row();
