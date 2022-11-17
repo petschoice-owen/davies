@@ -67,7 +67,6 @@
         }
     }
 
-
     li, p {
         font-size: 18px;
     }
@@ -174,6 +173,20 @@
         .shop_table {
             padding: 0;
 
+            #shipping_method {
+                * {
+                    padding: 0;
+                }
+
+                & + * {
+                    padding: 0;
+                }
+
+                & + .woocommerce-shipping-destination {
+                    padding-top: 7px;
+                }
+            }
+
             form.woocommerce-shipping-calculator {
                 padding: 0;
             }
@@ -190,6 +203,10 @@
             align-items: center;
             margin: 0 !important;
 
+            & + * {
+                padding: 0;
+            }
+
             label {
                 cursor: pointer;
             }
@@ -204,6 +221,10 @@
     .devnet_fsl-free-shipping {
         padding: 20px 25px !important;
         margin: 0 0 20px !important;
+
+        * {
+            padding: 0 !important;
+        }
 
         .fsl-title.title {
             margin: 0 !important;
