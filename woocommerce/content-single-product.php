@@ -85,7 +85,7 @@ if ( post_password_required() ) {
 					<?php if( get_field('product_tab_ingredients') ): ?>
 						<button class="nav-link" id="nav_ingredients" data-bs-toggle="tab" data-bs-target="#tab_ingredients" type="button" role="tab" aria-controls="tab_ingredients" aria-selected="false">Ingredients</button>
 					<?php endif; ?>
-					<?php if( get_field('product_tab_feeding_guide') ): ?>
+					<?php if( get_field('product_tab_feeding_guide_text_editor') || get_field('product_tab_feeding_guide') ): ?>
 						<button class="nav-link" id="nav_feeding_guide" data-bs-toggle="tab" data-bs-target="#tab_feeding_guide" type="button" role="tab" aria-controls="tab_feeding_guide" aria-selected="false">Feeding Guide</button>
 					<?php endif; ?>
 				</div>
@@ -126,9 +126,12 @@ if ( post_password_required() ) {
 						</div>
 					</div>
 				<?php endif; ?>
-				<?php if( get_field('product_tab_feeding_guide') ): ?>
+				<?php if( get_field('product_tab_feeding_guide_text_editor') || get_field('product_tab_feeding_guide') ): ?>
 					<div class="tab-pane fade" id="tab_feeding_guide" role="tabpanel" aria-labelledby="nav_feeding_guide">
 						<div class="tab-content-wrapper">
+							<?php if( get_field('product_tab_feeding_guide_text_editor') ): ?>
+								<?php the_field('product_tab_feeding_guide_text_editor'); ?>
+							<?php endif; ?>
 							<?php
 								if( have_rows('product_tab_feeding_guide') ): ?>
 									<table>

@@ -205,6 +205,14 @@
                     * + * {
                         margin-top: 15px;
                     }
+
+                    ul {
+                        padding-left: 30px;
+                    }
+
+                    li + li {
+                        margin-top: 5px;
+                    }
                 }
 
                 h1, h2, h3, h4, h5, h6, p, li, label, th, td {
@@ -403,6 +411,10 @@
 
                 .tab-content {
                     padding: 20px 10px;
+
+                    &-wrapper li + li {
+                        margin-top: 2px;
+                    }
 
                     th, td {
                         padding: 5px;
