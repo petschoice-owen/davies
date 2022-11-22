@@ -20,7 +20,7 @@
             .product {
                 display: flex;
                 flex-direction: column;
-                align-self: flex-start;
+                // align-self: flex-start;
                 float: none;
                 width: calc(25% - 30px);
                 padding: 25px 15px;
@@ -53,12 +53,15 @@
             }
 
             p {
+                margin-top: auto;
                 font-size: 16px;
                 color: $text-color;
             }
 
             .price {
-                margin: 10px auto 15px;
+                // margin: 10px auto 15px;
+                margin: 0 auto;
+                padding: 10px 0 15px;
                 font-family: $font-arial-bold;
                 font-size: 22px;
                 line-height: 1.2;
@@ -107,6 +110,7 @@
             }
 
             .add_to_cart_button {
+                margin-top: auto;
                 background-color: $brand-color;
 
                 &.loading {
@@ -201,6 +205,20 @@
             .add_to_cart_button,
             .added_to_cart {
                 font-size: 12px;
+            }
+        }
+    }
+
+    @media (min-width: 576px) {
+        .product-listing {
+            .products {
+                .product {
+                    .woocommerce-loop-product__link {
+                        display: flex;
+                        flex-direction: column;
+                        height: calc(100% - 40px);
+                    }
+                }
             }
         }
     }
