@@ -60,25 +60,25 @@
     }
 
     .slide-heading {
-        font-family: $font-adelle;
+        font-family: $font-theserif;
         font-size: 50px;
         line-height: 1.2;
         color: $brand-color;
 
         b,
         strong {
-            font-family: $font-adelle-bold;
+            font-family: $font-theserif-bold;
         }
 
         h1 {
-            font-family: $font-adelle;
+            font-family: $font-theserif;
             font-size: 50px;
             line-height: 1.2;
             color: $brand-color;
 
             b,
             strong {
-                font-family: $font-adelle-bold;
+                font-family: $font-theserif-bold;
             }
         }
     }
@@ -88,7 +88,7 @@
     }
 
     .slide-description {
-        font-family: $font-adelle;
+        font-family: $font-theserif;
         font-size: 20px;
         line-height: 1.4;
     }
@@ -286,7 +286,7 @@
         .quote {
             position: relative;
             padding: 70px 20px 10px 0;
-            font-family: $font-adelle;
+            font-family: $font-theserif;
             font-size: 26px;
 
             &::before {
@@ -307,7 +307,7 @@
         .author {
             position: relative;
             padding-left: 70px;
-            font-family: $font-adelle-bold;
+            font-family: $font-theserif-bold;
             font-size: 22px;
 
             &::before {
@@ -323,7 +323,7 @@
             }
 
             .location {
-                font-family: $font-adelle;
+                font-family: $font-theserif;
             }
         }
     }

@@ -4,8 +4,8 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 
-@include font-face($font-adelle, $base-url + 'fonts/', 'adelle', 'adelle');
-@include font-face($font-adelle-bold, $base-url + 'fonts/', 'adelle-bold', 'adelle-bold');
+@include font-face($font-theserif, $base-url + 'fonts/', 'theserif', 'theserif');
+@include font-face($font-theserif-bold, $base-url + 'fonts/', 'theserif-bold', 'theserif-bold');
 @include font-face($font-arial, $base-url + 'fonts/', 'arial', 'arial');
 @include font-face($font-arial-bold, $base-url + 'fonts/', 'arial-bold', 'arial-bold');
 @include font-face($font-arial-bold-italic, $base-url + 'fonts/', 'arial-bold-italic', 'arial-bold-italic');

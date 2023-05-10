@@ -78,7 +78,7 @@
             .quote {
                 position: relative;
                 padding: 60px 20px 10px 0;
-                font-family: $font-adelle;
+                font-family: $font-theserif;
                 font-size: 24px;
 
                 &::before {
@@ -96,7 +96,7 @@
                 position: relative;
                 padding-left: 60px;
                 margin-top: 0;
-                font-family: $font-adelle-bold;
+                font-family: $font-theserif-bold;
                 font-size: 20px;
 
                 &::before {
@@ -112,7 +112,7 @@
                 }
 
                 .location {
-                    font-family: $font-adelle;
+                    font-family: $font-theserif;
                 }
             }
         }
