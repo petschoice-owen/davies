@@ -1,0 +1,39 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------------------
+// This file contains all styles related to the cookie policy pages of the site/application.
+// -----------------------------------------------------------------------------------------
+
+#cmplz-document {
+    margin: auto;
+}
+#cmplz-manage-consent .cmplz-btn.cmplz-manage-consent {
+    font-size: 14px;
+    color: #fff;
+    background: #513f5e;
+}
+#cmplz-document summary .cmplz-category-title,
+#cmplz-document summary .cmplz-always-active {
+    margin-bottom: 0;
+}
+#cmplz-document summary .cmplz-banner-checkbox input {
+    margin: auto;
+}
+/* .cmplz-marketing .page-default .content-section .wrapper *+*, */
+.page-default .content-section .wrapper #cmplz-document *+* {
+    padding-top: initial;
+}
+#cmplz-document .cmplz-subtitle {
+    margin: 15px 0 5px;
+}
+.cmplz-marketing #cmplz-document h2, .cmplz-marketing #cmplz-document h3 {
+    padding-top: initial;
+    padding-bottom: 0;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+#cmplz-cookies-overview .cmplz-dropdown summary div:after, 
+#cmplz-document .cmplz-dropdown summary div:after {
+    background-size: 12px;
+    background-position: center;
+}

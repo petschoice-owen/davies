@@ -558,3 +558,36 @@
         }
     }
 }
+
+.woocommerce-checkout .page-default {
+    .restricted-message-wrapper {
+        display: none;
+    }
+
+    .restricted-message {
+        margin-top: 20px;
+        padding: 15px;
+        color: #fff !important;
+        background-color: #e6ae2b;
+    }
+    
+    // @media (max-width: 767px) {
+    //     .restricted-message {
+    //         font-size: 16px !important;
+    //     }
+    // }
+}
+
+.restricted-zone.woocommerce-checkout .page-default {
+    .woocommerce-shipping-totals,
+    .order-total,
+    .woocommerce-checkout-payment,
+    .ppc-button-wrapper {
+        display: none !important;
+    }
+
+    .woocommerce .restricted-message-wrapper,
+    .woocommerce .restricted-message {
+        display: block;
+    }
+}

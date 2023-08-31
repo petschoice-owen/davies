@@ -135,6 +135,12 @@
                 background-color: $yellow;
             }
         }
+
+        span.wpcf7-spinner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .field-select {

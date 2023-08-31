@@ -149,3 +149,12 @@ input[type="text"] {
         background-color: #000;
     }
 }
+
+// Google reCaptcha - hide on all pages
+.grecaptcha-badge {
+	display: none !important;
+}
+// Google reCatpcha - show on Contact Page
+.page-template-page-contact .grecaptcha-badge {
+	display: block !important;
+}
